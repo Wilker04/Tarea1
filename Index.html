@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mi Pagina</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Informaciones">Informaciones</a></li>
+                <li><a href="#Hobbies">Hobbies</a></li>
+                <li><a href="#Video">Video</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <section id="Inicio">
+        <p>Mi Blog Personal</p>
+    </section>
+
+    <br>
+    <section id="Informaciones">
+        
+        <br>
+        <h1>Informaciones</h1>
+        <br>
+
+        <div class="card">
+        <img src="Imagenes/Wilker.jpeg" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>Wilker Locksly Jimenez Martinez</b></h4> 
+          <p>Numero: 849-324-5432</p>
+          <p>Direccion: Calle #29 No.25 24 de Abril</p>
+          <p>Email: <a href="#">wilkerjim011@gmail.com</a></p>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+        </div>
+      </div>
+      <br>
+    </section>
+    
+    <section id="Hobbies">
+        <h1>Hobbies</h1>
+        <p>En mis tiempos libres me gusta jugar videojuegos, el deporte/ejercitarme, escuchar musica. Aparte de esto
+            me encanta la programacion y todo lo que esta conlleva.
+        </p>
+    </section>
+
+    <section id="Video">
+        <h1>Video</h1>
+        <br>
+        <div id="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/FO8VTYucej8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div></section>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("scrolled", window.scrollY>0);
+    });
+</script>
